@@ -1,0 +1,20 @@
+Currently, thinking about a soul-knight style game, where you can shoot at enemies, enemies shoot at you, there are obstacles, and you need to traverse the map and reach the end. 
+
+Aesthetic Goals: 
+Challenge, in the sense that it should challenge the player to dodge enemy attacks, and kill enemies as fast as possible. 
+If it is easy for the player to die, yet still clear to the player that it is possible to win, then this is a success. 
+
+Discovery, in the sense that the player should be able to discover new things, and find encounter unexpected features/enemies
+If new things the player comes across are interesting and unexpected, then this is a success. 
+It is good if the player finds themself wondering how a feature works, and can experiment with it. 
+
+Core Loop:
+The core gameplay loop here is the player enters a new room, and in the room, enemies spawn and shoot at the player. The player can shoot at enemies, killing them. 
+Upon completing a room, the player gets healed, and gains some gold. 
+The player can roam around the map, finding new rooms, finding chests that provide upgrades to the player's weapon, or finding merchants that sell upgrades/heals. 
+Eventually, the player will find the exit, beating the game. 
+
+The roaming should fulfill the discovery aspect, and the player should be able to experiment with different weapons/upgrades. 
+Fighting enemies and having ways to mitigate damage/heal should fulfill the challenge goal. 
+
+Development Process:

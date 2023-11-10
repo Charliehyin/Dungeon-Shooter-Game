@@ -17,4 +17,21 @@ Eventually, the player will find the exit, beating the game.
 The roaming should fulfill the discovery aspect, and the player should be able to experiment with different weapons/upgrades. 
 Fighting enemies and having ways to mitigate damage/heal should fulfill the challenge goal. 
 
+
 Development Process:
+I will begin the development of this by implementing a simple player avatar, that can move around and shoot at a fixed object. 
+The camera should follow the player. 
+
+Never mind on camera following the player, I decided to create separate scenes for each room. 
+Added objects for doors going in all 4 directions and a player object. 
+
+Created chest object, will work on giving the player a gun first before implementing shooting
+Added animations to chest object, and made the chest give the player a gun. 
+
+Now working on making the enemies, and allowing the player to shoot. 
+Additionally, creating functionality to track the number of enemies alive, and to clear the room. 
+
+Just spent 2 hours working on enemy AI, gave up and now they will run around randomly
+Also tried to load multiple scenes for the rooms, but then realized it would be way easier to just have everything in one scene
+Thus, I duplicated my room and now I have a bunch of rooms. 
+Then, I made the doors move you between the rooms, and made a boss door. 

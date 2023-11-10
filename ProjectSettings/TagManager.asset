@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Up Door
+  - Left Door
+  - Right Door
+  - Down Door
+  - Enemy
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -11,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player Bullets
   - 
   - 
   - 
@@ -40,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Above Background
+    uniqueID: 4063133057
     locked: 0

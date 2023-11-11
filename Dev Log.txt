@@ -3,10 +3,12 @@ Currently, thinking about a soul-knight style game, where you can shoot at enemi
 Aesthetic Goals: 
 Challenge, in the sense that it should challenge the player to dodge enemy attacks, and kill enemies as fast as possible. 
 If it is easy for the player to die, yet still clear to the player that it is possible to win, then this is a success. 
+If it is too easy to beat the game, then this is a failure. 
 
 Discovery, in the sense that the player should be able to discover new things, and find encounter unexpected features/enemies
 If new things the player comes across are interesting and unexpected, then this is a success. 
 It is good if the player finds themself wondering how a feature works, and can experiment with it. 
+If the player is bored, then this game is a fail. 
 
 Core Loop:
 The core gameplay loop here is the player enters a new room, and in the room, enemies spawn and shoot at the player. The player can shoot at enemies, killing them. 
@@ -61,3 +63,7 @@ I made the boss room and the boss.
 Also, added sounds to the game
 
 
+Postmortem: 
+I originally set out to create a copy of soul knight, and that is exactly what I was able to do. My goals stayed consistent throughout the process, with some minor changes along the way. 
+Everything went right, except for my attempts at making AI for the enemy. I gave up on that. At the start of the project, I wish I knew more about animations, because that would have made 
+it possible to make the game look pretty cool. However, I got alot better with unity, and learning how to use the engine to make games. 

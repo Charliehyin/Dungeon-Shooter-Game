@@ -14,7 +14,7 @@ public class HealthCounter : MonoBehaviour
     void Start()
     {
         name = "Health Counter";
-        health = 5f;
+        health = 3f;
         healthText = GetComponent<TextMeshProUGUI>();
         // Display current health
 

@@ -1,0 +1,5 @@
+Move: wasd
+Shoot: left click
+Interact: space bar
+
+Your goal is to get better weapons, and beat the boss without dying. 

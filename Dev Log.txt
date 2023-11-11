@@ -54,5 +54,10 @@ Created the merchant, and made the merchant sell a bow and potions
 Made the weapons rotate based on where your mouse is, and made them shoot continuously when you hold left click
 
 Created two new rooms with walls and enemies
+Now working on the boss. I plan to create a health bar for the boss as well. 
+
+Scratch the health bar, I'm lazy
+I made the boss room and the boss. 
+Also, added sounds to the game
 
 

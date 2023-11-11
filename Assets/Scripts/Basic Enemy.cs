@@ -25,7 +25,7 @@ public class BasicEnemy : MonoBehaviour
     void OnDisable()
     {
         player.enemyCount -= 1;
-        player.goldCounter.updateGold((int)(Random.Range(0, 5)));
+        player.goldCounter.updateGold((int)(Random.Range(0, 3)));
     }
 
     void Start()

@@ -24,7 +24,11 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        //Don't collide with enemy bullets
+        if (!collision.collider.CompareTag("EnemyBullet"))
+        {
+            Destroy(gameObject);
+        }
     }
     // Remove the bullet when it leaves the screen
     private void OnBecameInvisible()

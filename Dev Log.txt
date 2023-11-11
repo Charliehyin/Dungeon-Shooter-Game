@@ -35,3 +35,24 @@ Just spent 2 hours working on enemy AI, gave up and now they will run around ran
 Also tried to load multiple scenes for the rooms, but then realized it would be way easier to just have everything in one scene
 Thus, I duplicated my room and now I have a bunch of rooms. 
 Then, I made the doors move you between the rooms, and made a boss door. 
+
+I added functionality for enemies to shoot
+Also added a health counter, and a damage invulnerability time after getting hit
+Enemies do damage when they shoot, and also do damage when they melee attack you
+
+I added a Wall prefab, and created the first basic room. 
+Might make the basic room harder later. 
+
+Now, working on the chest room. Added chest functionality to pick up the weapon inside, and put it back. 
+Will be useful for chest room, when the player can switch the guns inside the chest. 
+
+Added a bow and machine gun, with different properties
+Bow arrows should rotate based on the direction it is traveling
+
+Added a gold counter system, and worked on some sprites for the merchant
+Created the merchant, and made the merchant sell a bow and potions
+Made the weapons rotate based on where your mouse is, and made them shoot continuously when you hold left click
+
+Created two new rooms with walls and enemies
+
+

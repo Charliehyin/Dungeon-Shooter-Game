@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,4 +100,6 @@ MonoBehaviour:
   fireRate: 0.2
   damage: 2
   range: 250
+  speed: 0
   bulletPrefab: {fileID: 264165222531275329, guid: b9437da71f2c5ae468d64d37f94ba71e, type: 3}
+  shootSound: {fileID: 8300000, guid: bed7ee921d7ebfb42a5363b4346305c3, type: 3}

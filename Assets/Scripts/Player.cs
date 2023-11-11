@@ -10,11 +10,11 @@ public class Player : MonoBehaviour
     public float enemyCount;
     bool canChangeRoom;
     public GameObject gun;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        //DontDestroyOnLoad(gameObject);
-    }
+    public HealthCounter healthCounter;
+    public GoldCounter goldCounter;
+
+    public float damageInvulnerabilityTime = .15f;
+    float nextDamageTime = 0f;
 
     void Start()
     {
@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
         this.name = "Player";
         BoxCollider2D boxCollider2D = rb.GetComponent<BoxCollider2D>();
         canChangeRoom = false;
+        healthCounter = FindAnyObjectByType<HealthCounter>();
+        goldCounter = FindAnyObjectByType<GoldCounter>();
     }
 
     // Update is called once per frame
@@ -41,9 +43,20 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Enemy"))
+        // Don't take damage from the enemy if the player was recently damaged
+        if (Time.time >= nextDamageTime) 
         {
-            // Take damage from the enemy
+            if (collision.collider.CompareTag("Enemy"))
+            {
+                // Take damage from the enemy
+                healthCounter.updateHealth(-1);
+            }
+            if (collision.collider.CompareTag("EnemyBullet"))
+            {
+                //Take damage from the enemy bullet
+                healthCounter.updateHealth(collision.collider.GetComponent<EnemyBullet>().damage * -1);
+            }
+            nextDamageTime = Time.time + damageInvulnerabilityTime;
         }
         if (collision.collider.CompareTag("Left Door") && canChangeRoom)
         { 
@@ -52,6 +65,7 @@ public class Player : MonoBehaviour
 
             // Move the player 50 units to the left
             transform.position = new Vector2(transform.position.x - 50, transform.position.y);
+            canChangeRoom = false;
 
         }
         if (collision.collider.CompareTag("Right Door") && canChangeRoom)
@@ -61,6 +75,7 @@ public class Player : MonoBehaviour
 
             // Move the player 50 units to the right
             transform.position = new Vector2(transform.position.x + 50, transform.position.y);
+            canChangeRoom = false;
         }
         if (collision.collider.CompareTag("Up Door") && canChangeRoom)
         {
@@ -69,6 +84,7 @@ public class Player : MonoBehaviour
 
             // Move the player 48 units up
             transform.position = new Vector2(transform.position.x, transform.position.y + 48);
+            canChangeRoom = false;
         }
         if (collision.collider.CompareTag("Down Door") && canChangeRoom)
         {
@@ -77,6 +93,7 @@ public class Player : MonoBehaviour
 
             // Move the player 48 units down
             transform.position = new Vector2(transform.position.x, transform.position.y - 48);
+            canChangeRoom = false;
         }
     }
 }
